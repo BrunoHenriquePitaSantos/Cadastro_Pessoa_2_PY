@@ -98,7 +98,7 @@ def main():
                                 novo_rendimento = input(f"O rendimento atual e {cada_pf.rendimento}. Digite o novo valor de rendimento: ")   
                                 cada_pf.rendimento = novo_rendimento
                             elif escolha == "L":
-                                novo_logradouro = input(f"O logradouro atual e {cada.pf.logradouro}. Digite o novo logradouro:  ") 
+                                novo_logradouro = input(f"O logradouro atual e {cada_pf.logradouro}. Digite o novo logradouro:  ") 
                             elif escolha == "M":
                                 novo_numero = input(f"O numero do endereco atual e {cada_pf.numero}. Digite um novo numero para alterar: ")
                             else:
@@ -194,7 +194,7 @@ def main():
                     cnpj_para_atualizar = input("Digite o CNPJ que deseja atualizar")
                     empresa_encontrada = False
 
-                    for cada_pJ in lista_pfJ:
+                    for cada_pJ in lista_pj:
                         if cada_pJ.cnpj == cnpj_para_atualizar:
                             empresa_encontrada = True
 
@@ -207,21 +207,21 @@ def main():
                             escolha = input("Digite a inicial d atributo que deseja alterar: ").strip(). upper()
 
                             if escolha == 'N':
-                                novo_nome = input(f"O nome atual e {cada_pf.nome}. Digite o novo nome para atualizar: ")
+                                novo_nome = input(f"O nome atual e {cada_pj.nome}. Digite o novo nome para atualizar: ")
                                 cada_pf.nome = novo_nome
                             elif escolha == "R":
-                                novo_rendimento = input(f"O rendimento atual e {cada_pf.rendimento}. Digite o novo valor de rendimento: ")   
+                                novo_rendimento = input(f"O rendimento atual e {cada_pj.rendimento}. Digite o novo valor de rendimento: ")   
                                 cada_pf.rendimento = novo_rendimento
                             elif escolha == "L":
-                                novo_logradouro = input(f"O logradouro atual e {cada.pf.logradouro}. Digite o novo logradouro:  ") 
+                                novo_logradouro = input(f"O logradouro atual e {cada_pj.logradouro}. Digite o novo logradouro:  ") 
                             elif escolha == "M":
-                                novo_numero = input(f"O numero do endereco atual e {cada_pf.numero}. Digite um novo numero para alterar: ")
+                                novo_numero = input(f"O numero do endereco atual e {cada_pj.numero}. Digite um novo numero para alterar: ")
                             else:
                                 print("Opcao Invalida")  
                                 break     
 
-                    if not empresa_encontrada:
-                        print("Nenhuma empresa  com esse CNPJ foi encontrada")
+                        if not empresa_encontrada:
+                            print("Nenhuma empresa  com esse CNPJ foi encontrada")
 
 
 
